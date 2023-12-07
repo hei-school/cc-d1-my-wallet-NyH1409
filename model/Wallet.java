@@ -60,7 +60,7 @@ public class Wallet {
         pocket.empty();
         List<Pocket> random = pockets.stream().filter(pk -> pk.getAmountIn() >= remain).toList();
         if (random.isEmpty()) {
-          System.out.println("Vous n'avez pas suffisant d'argent.");
+          System.out.println("Vous n'avez pas suffisamment d'argent.");
         } else {
           Pocket randomPk = random.get(0);
           double remainInRandom = randomPk.getAmountIn() - remain;
